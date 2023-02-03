@@ -6,6 +6,8 @@ import (
 	"net/http"
 	"time"
 
+	"BoxApi/config"
+
 	"github.com/gin-gonic/gin"
 )
 
@@ -22,10 +24,10 @@ type Server struct {
 	Port string
 }
 
-func NewServer(host, port string) *Server {
+func NewServer(config config.Config) *Server {
 	return &Server{
-		Host: host,
-		Port: port,
+		Host: config["Host"],
+		Port: config["Port"],
 	}
 }
 

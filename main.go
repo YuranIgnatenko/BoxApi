@@ -1,13 +1,20 @@
 package main
 
 import (
+	"BoxApi/config"
 	"BoxApi/server"
+	"flag"
 
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
-	server := server.NewServer("localhost", "8080")
+	configFile := flag.String("config", "config/config.json", "set configuration json-file (some_file.json)")
+	flag.Parse()
+
+	config := config.NewConfig(*configFile)
+
+	server := server.NewServer(config)
 	router := gin.Default()
 	router.Handle("GET", "/home", server.HandleHomeGet)
 	router.Handle("POST", "/home", server.HandleHomePost)
