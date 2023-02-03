@@ -1,25 +1,29 @@
-# [ BoxApi ] (учебный)
+# BoxApi
 
-> Простой сервис для обработки запросов
-- POST
-- GET
+> Easy micro-service for receive requests
+- POST (returns json)
+- GET (returns html)
     
 ***
 
-> API
+> List supported API requests
 + /home
-  + общий каталог
+  + main list urls
 + /calc
-  + посчитать простой пример
+  + get result example
 + /time
-  + получить время онлайн 
+  + get time now
 
 
 ***
 
-> Install
-
+> Requirements
+``` 
+go get -u github.com/gin-gonic/gin
 ```
+
+> Install
+``` 
 git clone https://github.com/YuranIgnatenko/BoxApi
 ```
 
@@ -28,12 +32,12 @@ git clone https://github.com/YuranIgnatenko/BoxApi
 cd BoxApi
 
 go run main.go
+go run main.go -config=some_file.json
 ```
 
 
 > Example used API (terminal)
-
-```
+``` 
 curl localhost:8080/home
 curl localhost:8080/calc
 
@@ -41,14 +45,19 @@ curl -POST localhost:8080/home
 curl -POST localhost:8080/time
 ```
 
-> Example used API (browser)
+> Example used API (browser-click link)
 
-http://localhost:8080/home
-
-http://localhost:8080/calc
-
-http://localhost:8080/time
++ http://localhost:8080/home
++ http://localhost:8080/calc
++ http://localhost:8080/time
 
 
 ***
 
+> Example config.json file
+``` js
+{
+    "Host":"localhost",
+    "Port":"8080",
+}
+```
