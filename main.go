@@ -39,11 +39,15 @@ func main() {
 
 	server := server.NewServer(config)
 	router := gin.Default()
+	
 	router.Handle("GET", "/home", server.HandleHomeGet)
 	router.Handle("POST", "/home", server.HandleHomePost)
+
 	router.Handle("GET", "/time", server.HandleTimeGet)
 	router.Handle("POST", "/time", server.HandleTimePost)
+	
 	router.Handle("GET", "/calc", server.HandleCalcGet)
 	router.Handle("POST", "/calc", server.HandleCalcPost)
+	
 	router.Run(server.Addr())
 }
