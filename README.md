@@ -13,6 +13,8 @@
   + get result example
 + /time
   + get time now
++ /wordplus
+  + string-analizator 
 
 
 ***
@@ -44,27 +46,45 @@ go run main.go -config=some_file.json >> gin.log
 (custom config and save logs gin)
 ```
 
+***
+
+<br>
 
 > Example used API (terminal)
 ``` 
   (GET)
 curl localhost:8080/home
 curl localhost:8080/calc
+curl localhost:8080/time
+curl localhost:8080/wordplus
 
+```
+<br>
+
+```
   (POST)
 curl -POST localhost:8080/home
+
 curl -POST localhost:8080/time
-curl -v -X POST \
+
+curl -X POST \
   http://localhost:8080/calc \
   -H 'content-type: application/json' \
-  -d '{ "x": 2, "y":0, "/" }'
+  -d '{ "x": 23, "y":2.4, "/" }'
+
+curl -X POST \
+  http://localhost:8080/wordplus \
+  -H 'content-type: application/json' \
+  -d '{"x":"Hello , Bob! How you Are ?", \
+      "params":["cw","cwl","cwu","cwt","cs","verb","lens"]}'
 ```
 
-> Example used API (browser-click link)
+> Example used API (GET) (browser-click link)
 
 + http://localhost:8080/home
 + http://localhost:8080/calc
 + http://localhost:8080/time
++ http://localhost:8080/wordplus
 
 
 ***
