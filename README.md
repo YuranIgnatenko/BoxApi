@@ -59,5 +59,6 @@ curl -POST localhost:8080/time
 {
     "Host":"localhost",
     "Port":"8080",
+    "PathJournal":"logs/service.log"  
 }
 ```

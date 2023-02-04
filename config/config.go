@@ -27,5 +27,9 @@ func NewConfig(namefile string) Config {
 		panic(errs.ErrorNotFoundPort)
 	}
 
+	if data["PathJournal"] == "" {
+		panic(errs.ErrorNotFoundPort)
+	}
+
 	return data
 }
