@@ -48,6 +48,8 @@ func main() {
 	
 	router.Handle("GET", "/calc", server.HandleCalcGet)
 	router.Handle("POST", "/calc", server.HandleCalcPost)
+
+	router.Handle("POST", "/wordplus", server.HandleWordPlusPost)
 	
 	router.Run(server.Addr())
 }
