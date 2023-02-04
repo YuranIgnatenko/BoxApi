@@ -16,5 +16,6 @@ func (s *Server) HandleHomeGet(c *gin.Context) {
 }
 
 func (s *Server) HandleHomePost(c *gin.Context) {
-	c.JSON(http.StatusOK, gin.H{"data": "test"})
+	data_list := `[/home,/calc,/time]`
+	c.JSON(http.StatusOK, gin.H{"list api": data_list})
 }

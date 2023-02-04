@@ -1,3 +1,8 @@
-* {
-    border-color: blue;
+a {
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+    color:chartreuse
 }
