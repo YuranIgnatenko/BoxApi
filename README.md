@@ -48,7 +48,7 @@ go run main.go -config=some_file.json >> gin.log
 1. Run service
 2. Click link
    ***
-+**** http://localhost:8080/home
++ http://localhost:8080/home
 + http://localhost:8080/calc
 + http://localhost:8080/time
 + http://localhost:8080/wordplus
