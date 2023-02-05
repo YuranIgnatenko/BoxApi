@@ -14,10 +14,10 @@ sudo snap install postman
 
 > * GET
 
-localhost:8080/home
+localhost:8080/api/home
 ![](/docs/src/postman_home_get.png)
 
-localhost:8080/time
+localhost:8080/api/time
 ![](/docs/src/postman_time_get.png)
 ***
 
@@ -25,10 +25,10 @@ localhost:8080/time
 
 > * POST
 
-localhost:8080/calc
+localhost:8080/api/calc
 ![](/docs/src/postman_calc_post.png)
 
-localhost:8080/wordplus
+localhost:8080/api/wordplus
 ![](/docs/src/postman_worldplus_post.png)
 
 ***

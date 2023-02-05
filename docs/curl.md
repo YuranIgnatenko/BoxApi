@@ -5,7 +5,7 @@
 * POST - returns JSON
 * HOST - host server
 * PORT - port server
-* API - path api method
+* PATH - path api method
 * YOUR_JSON - params json from doc API
 
 ***
@@ -14,12 +14,12 @@
 
 > * GET
 ```
-curl HOST:PORT/API
+curl HOST:PORT/api/PATH
 ```
 ```
-curl localhost:8080/home
+curl localhost:8080/apihome
 
-curl localhost:8080/calc
+curl localhost:8080/api/calc
 ```
 ***
 <br>
@@ -27,7 +27,7 @@ curl localhost:8080/calc
 > * POST
 
 ```
-curl -POST HOST:PORT/API \
+curl -POST HOST:PORT/api/PATH \
         -H 'content-type: application/json' \
         -d '{YOUR_JSON}
 ```
@@ -35,12 +35,12 @@ curl -POST HOST:PORT/API \
 ```
 
 curl -X POST \
-  http://localhost:8080/calc \
+  http://localhost:8080/api/calc \
   -H 'content-type: application/json' \
   -d '{ "x": 23, "y":2.4, "/" }'
 
 curl -X POST \
-  http://localhost:8080/wordplus \
+  http://localhost:8080/api/wordplus \
   -H 'content-type: application/json' \
   -d '{"x":"Hello , Bob! How you Are ?", \
       "params":["cw","cwl", \
