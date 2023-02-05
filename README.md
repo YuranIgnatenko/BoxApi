@@ -7,11 +7,17 @@ Easy micro-service for receive requests
 
 
 
-> Requirements
+> Main requirements
 ``` 
 go get -u github.com/gin-gonic/gin
 ```
 
+> Other requirements
+```
+pip3 install pandas
+pip3 install odfpy
+pip3 install prettytable
+```
 > Install
 ``` 
 git clone https://github.com/YuranIgnatenko/BoxApi
@@ -38,29 +44,19 @@ go run main.go -config=some_file.json >> gin.log
 
 <br>
 
-> Example used API (GET) (browser-click link)
-
-+ http://localhost:8080/home
+> Example use browser
+1. Run service
+2. Click link
+   ***
++**** http://localhost:8080/home
 + http://localhost:8080/calc
 + http://localhost:8080/time
 + http://localhost:8080/wordplus
 
-
-<!-- > List supported API requests -->
-<!-- + /home -->
-  <!-- + main list urls -->
-<!-- + /calc -->
-  <!-- + get result example -->
-<!-- + /time -->
-  <!-- + get time now -->
-<!-- + /wordplus -->
-  <!-- + string-analizator  -->
-
-
-
-***
-> Documentation & Examples
+> Examples
 * [Example curl](./docs/curl.md)
 * [Example postman](./docs/postman.md)
 * [Example config](./docs/config.md)
+
+> Documentation 
 * [API](./docs/api.md)
