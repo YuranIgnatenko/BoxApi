@@ -1,23 +1,11 @@
-# BoxApi
+> # BoxApi
 
-> Easy micro-service for receive requests
-- POST (returns json)
-- GET (returns html)
+Easy micro-service for receive requests
+
     
 ***
 
-> List supported API requests
-+ /home
-  + main list urls
-+ /calc
-  + get result example
-+ /time
-  + get time now
-+ /wordplus
-  + string-analizator 
 
-
-***
 
 > Requirements
 ``` 
@@ -50,35 +38,6 @@ go run main.go -config=some_file.json >> gin.log
 
 <br>
 
-> Example used API (terminal)
-``` 
-  (GET)
-curl localhost:8080/home
-curl localhost:8080/calc
-curl localhost:8080/time
-curl localhost:8080/wordplus
-
-```
-<br>
-
-```
-  (POST)
-curl -POST localhost:8080/home
-
-curl -POST localhost:8080/time
-
-curl -X POST \
-  http://localhost:8080/calc \
-  -H 'content-type: application/json' \
-  -d '{ "x": 23, "y":2.4, "/" }'
-
-curl -X POST \
-  http://localhost:8080/wordplus \
-  -H 'content-type: application/json' \
-  -d '{"x":"Hello , Bob! How you Are ?", \
-      "params":["cw","cwl","cwu","cwt","cs","verb","lens"]}'
-```
-
 > Example used API (GET) (browser-click link)
 
 + http://localhost:8080/home
@@ -87,13 +46,21 @@ curl -X POST \
 + http://localhost:8080/wordplus
 
 
-***
+<!-- > List supported API requests -->
+<!-- + /home -->
+  <!-- + main list urls -->
+<!-- + /calc -->
+  <!-- + get result example -->
+<!-- + /time -->
+  <!-- + get time now -->
+<!-- + /wordplus -->
+  <!-- + string-analizator  -->
 
-> Example config.json file
-``` js
-{
-    "Host":"localhost",
-    "Port":"8080",
-    "PathJournal":"logs/service.log"  
-}
-```
+
+
+***
+> Documentation & Examples
+* [Example curl](./docs/curl.md)
+* [Example postman](./docs/postman.md)
+* [Example config](./docs/config.md)
+* [API](./docs/api.md)
