@@ -1,6 +1,7 @@
 package server
 
 import (
+	"fmt"
 	"io/ioutil"
 	"net/http"
 
@@ -13,9 +14,11 @@ func (s *Server) HandleCalcPost(c *gin.Context) {
 	var json *tools.FormCalc
 	if err := c.ShouldBindJSON(&json); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		fmt.Println(err)
 		return
 	}
 	result := tools.Calc(*json)
+	fmt.Println(result)
 	c.JSON(http.StatusOK, gin.H{"data": result})
 }
 

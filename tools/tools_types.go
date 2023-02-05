@@ -1,9 +1,9 @@
 package tools
 
 type FormCalc struct {
-	X    float64 `json:"x"`
-	Y    float64 `json:"y"`
-	Func string  `json:"func"`
+	X    float64 `form:"x" json:"X" binding:"required"`
+	Y    float64 `form:"y" json:"Y" binding:"required"`
+	Func string  `form="func" json:"Func" binding:"required"`
 }
 
 type FormWordPlus struct {
